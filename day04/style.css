@@ -1,0 +1,49 @@
+/* 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 상속: 글자 관련 속성은 자식이 물려받아요 */
+body {
+  background-color: #f7f9fb;
+  color: #1f2e3a;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+/* 태그 선택자 */
+h1 {
+  color: #0b6fb8;
+}
+
+/* 후손 선택자: nav 안의 모든 a */
+nav a {
+  color: #1b3f5e;
+}
+
+/* 가상 클래스: 마우스를 올렸을 때 */
+nav a:hover {
+  color: #e63946;
+}
+
+/* 첫 번째 목록 항목 */
+li:first-child {
+  font-weight: bold;
+}
+
+/* 아이디 선택자 */
+#work {
+  border-top: 2px solid #0b6fb8;
+}
+
+/* 클래스 선택자 */
+.card {
+  border: 1px solid #d3dee6;
+}
+
+/* 가상 요소: content가 없으면 안 나와요 */
+h2::before {
+  content: "▸ ";
+  color: #0b6fb8;
+}

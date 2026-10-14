@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="웹 개발을 배우며 창업을 준비하는 조현준의 포트폴리오입니다."
+    />
+    <title>조현준 — 포트폴리오</title>
+
+    <!-- Bootstrap 먼저, 내 CSS는 그 뒤에 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ── Navbar : 992px 아래에서 접힙니다 ── -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">조현준</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="메뉴 열기"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#intro">소개</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#works">작업</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#log">학습 기록</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">연락처</a>
+              </li>
+              <!-- 다크 모드 버튼 : 아래 script와 id가 짝입니다 -->
+              <li class="nav-item ms-lg-2">
+                <button
+                  id="themeBtn"
+                  class="btn btn-outline-secondary btn-sm"
+                  type="button"
+                  aria-label="다크 모드 전환"
+                >
+                  🌙
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ── 소개 : 사진 4칸 + 글 8칸 ── -->
+      <section id="intro" class="container my-5">
+        <h1 class="h2 mb-4">안녕하세요, 조현준입니다</h1>
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-4">
+            <!-- me.jpg 파일을 내 사진으로 바꾸면 됩니다 -->
+            <img
+              src="me.jpg"
+              alt="조현준의 프로필 사진"
+              class="img-fluid rounded"
+              width="240"
+              height="240"
+            />
+          </div>
+          <div class="col-12 col-md-8">
+            <!-- 타이핑 효과 : 아래 script의 words 배열을 바꾸면 문장이 바뀝니다 -->
+            <p class="lead">
+              <span id="typed" class="text-primary fw-bold"></span
+              ><span class="cursor" aria-hidden="true">|</span>
+            </p>
+            <p class="text-body-secondary">
+              1인 창업가 개발부트캠프 7기에서 HTML, CSS, Git, Bootstrap을
+              배우고 있습니다. 직접 만든 것을 기록으로 남기는 일에 관심이
+              많습니다.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge rounded-pill text-bg-primary">HTML</span>
+              <span class="badge rounded-pill text-bg-primary">CSS</span>
+              <span class="badge rounded-pill text-bg-primary">Git</span>
+              <span class="badge rounded-pill text-bg-primary">Bootstrap</span>
+              <span class="badge rounded-pill text-bg-secondary">창업 준비 중</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 작업 : 1열 → 2열 → 3열 ── -->
+      <section id="works" class="container my-5">
+        <h2 class="mb-4">작업</h2>
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="card-title h5">개인 소개 페이지</h3>
+                <p class="card-text text-body-secondary">
+                  HTML 뼈대와 시맨틱 태그로 만든 첫 번째 페이지입니다.
+                </p>
+                <span class="badge text-bg-primary">HTML</span>
+                <span class="badge text-bg-secondary">Day01~03</span>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <!-- TODO: GitHub 저장소 주소로 바꾸기 -->
+                <a href="#" class="btn btn-primary btn-sm">보러 가기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="card-title h5">선택자 우선순위 실습</h3>
+                <p class="card-text text-body-secondary">
+                  제목이 왜 빨간색인지 Styles 탭의 취소선으로 찾아낸 실습입니다.
+                </p>
+                <span class="badge text-bg-primary">CSS</span>
+                <span class="badge text-bg-secondary">Day04</span>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <!-- TODO: GitHub 저장소 주소로 바꾸기 -->
+                <a href="#" class="btn btn-primary btn-sm">보러 가기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="card-title h5">반응형 카드 목록</h3>
+                <p class="card-text text-body-secondary">
+                  미디어 쿼리로 1열·2열·3열이 되게 만들었습니다.
+                </p>
+                <span class="badge text-bg-primary">CSS</span>
+                <span class="badge text-bg-secondary">Day06</span>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#detail"
+                >
+                  자세히
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 학습 기록 : 블로그 글 주소를 href에 넣으면 연결됩니다 ── -->
+      <section id="log" class="container my-5">
+        <h2 class="mb-4">학습 기록</h2>
+        <div class="list-group">
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            <span><strong>Day01~03</strong> HTML · 폼 · 시맨틱</span>
+            <span class="badge text-bg-success rounded-pill">완료</span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            <span><strong>Day04~06</strong> CSS · 레이아웃 · 반응형</span>
+            <span class="badge text-bg-success rounded-pill">완료</span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            <span><strong>Day07</strong> Git &amp; GitHub</span>
+            <span class="badge text-bg-success rounded-pill">완료</span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            <span><strong>Day08</strong> Bootstrap 5</span>
+            <span class="badge text-bg-primary rounded-pill">진행 중</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── 연락처 : 넓은 화면에서 가운데 ── -->
+      <section id="contact" class="container my-5">
+        <h2 class="mb-4">연락처</h2>
+        <div class="row">
+          <div class="col-12 col-lg-6 mx-auto">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">이름</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">이메일</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <div class="form-text">답장 받을 주소를 적어주세요.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">하고 싶은 말</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">보내기</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-body-tertiary border-top py-4">
+      <div class="container text-center text-body-secondary">
+        <small>© 2026 조현준 · 1인 창업가 개발부트캠프 7기</small>
+      </div>
+    </footer>
+
+    <!-- ── Modal : 버튼의 target과 id가 짝입니다 ── -->
+    <div class="modal fade" id="detail" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">반응형 카드 목록</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="닫기"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">
+              CSS Grid와 미디어 쿼리로 만들었습니다. 768px에서 2열, 1024px에서
+              3열이 됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS는 body 끝에 : Navbar 접힘과 Modal에 필요합니다 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 내 JS : 다크 모드 + 타이핑 효과 -->
+    <script>
+      /* ── 다크 모드 ── */
+      const root = document.documentElement;
+      const themeBtn = document.getElementById("themeBtn");
+
+      function applyTheme(theme) {
+        root.setAttribute("data-bs-theme", theme);
+        themeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+      }
+
+      let saved = null;
+      try {
+        saved = localStorage.getItem("theme");
+      } catch (e) {}
+      const system = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      applyTheme(saved || system);
+
+      themeBtn.addEventListener("click", () => {
+        const next =
+          root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+        applyTheme(next);
+        try {
+          localStorage.setItem("theme", next);
+        } catch (e) {}
+      });
+
+      /* ── 타이핑 효과 : words 배열의 문장을 바꿔 보세요 ── */
+      const words = [
+        "웹 개발자를 꿈꾸는 조현준입니다",
+        "Git으로 하루를 기록하는 중입니다",
+        "Hi, I'm Hyunjun, a web dev in progress",
+      ];
+      const typed = document.getElementById("typed");
+      let w = 0;
+      let i = 0;
+      let deleting = false;
+
+      function tick() {
+        const word = words[w];
+        typed.textContent = word.slice(0, i);
+
+        if (!deleting && i === word.length) {
+          deleting = true;
+          setTimeout(tick, 1500);
+          return;
+        }
+        if (deleting && i === 0) {
+          deleting = false;
+          w = (w + 1) % words.length;
+        }
+        i += deleting ? -1 : 1;
+        setTimeout(tick, deleting ? 40 : 90);
+      }
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        typed.textContent = words[0];
+      } else {
+        tick();
+      }
+    </script>
+  </body>
+</html>
